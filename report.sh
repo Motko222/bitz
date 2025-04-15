@@ -15,7 +15,7 @@ bitz account >/root/logs/bitz-account
 
 miner_balance=$(cat /root/logs/bitz-account | grep Balance | tail -1 | awk '{print $2}')
 
-status="ok" && message=""
+status="ok" && message="bal $miner_balance"
 [ $errors -gt 500 ] && status="warning" && message="errors=$errors";
 [ $service -ne 1 ] && status="error" && message="service not running";
 

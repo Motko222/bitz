@@ -24,7 +24,7 @@ Wants=network-online.target
 EnvironmentFile=/root/scripts/$folder/env
 User=root
 Group=root
-ExecStart=bitz collect --cores $CORES
+ExecStart=/root/.cargo/bin/bitz collect --cores $CORES
 Restart=always
 RestartSec=30
 LimitNOFILE=65536
@@ -32,7 +32,6 @@ LimitNPROC=4096
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=$folder
-WorkingDirectory=/root/$folder
 
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/$folder.service

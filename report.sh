@@ -22,7 +22,7 @@ cat >$json << EOF
   "measurement":"report",
   "tags": {
        "id":"$folder",
-       "grp":"node2",
+       "grp":"node",
        "machine":"$MACHINE",
        "owner":"$OWNER"
   },

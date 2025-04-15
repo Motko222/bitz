@@ -22,8 +22,8 @@ cat >$json << EOF
   "measurement":"report",
   "tags": {
        "project":"$folder",
-       "id":"$ID"
-        "grp":"node2"
+       "id":"$ID",
+       "grp":"node2"
   },
   "fields": {
         "machine":"$MACHINE",

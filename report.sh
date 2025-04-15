@@ -12,7 +12,7 @@ errors=$(journalctl -u $folder.service --since "1 hour ago" --no-hostname -o cat
 rate_hour=$(journalctl -u $folder.service --since "1 hour ago" --no-hostname -o cat | grep -E "Confirmed" | awk '{print $6}' | sed 's/\./,/g' | awk '{sum+=$1} END {printf "%0.2f",sum}')
 rate_day=$(journalctl -u $folder.service --since "1 day ago" --no-hostname -o cat | grep -E "Confirmed" | awk '{print $6}' | sed 's/\./,/g' | awk '{sum+=$1} END {printf "%0.2f",sum}')
 
-status="ok" && message=""
+status="ok" && message="rate $rate_hour/$rate_day"
 [ $errors -gt 500 ] && status="warning" && message="errors=$errors";
 [ $service -ne 1 ] && status="error" && message="service not running";
 

@@ -22,12 +22,12 @@ cat >$json << EOF
   "measurement":"report",
   "tags": {
        "project":"$folder",
-       "id":"$ID",
-       "machine":"$MACHINE",
-       "grp":"node",
-       "owner":"$OWNER"
+       "id":"$ID"
+        "grp":"node2"
   },
   "fields": {
+        "machine":"$MACHINE",
+        "owner":"$OWNER",
         "chain":"eclipse",
         "network":"mainnet",
         "version":"$version",

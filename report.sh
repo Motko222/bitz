@@ -38,7 +38,6 @@ cat >$json << EOF
         "version":"$version",
         "status":"$status",
         "message":"$message",
-        "service":"$service",
         "errors":"$errors",
         "url":"",
         "score1":"$pool_balance (pool)",

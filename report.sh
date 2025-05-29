@@ -1,4 +1,3 @@
-  GNU nano 6.2                                                                                                                                     /root/scripts/bitz/report.sh                                                                                                                                              
 #!/bin/bash
 
 path=$(cd -- $(dirname -- "${BASH_SOURCE[0]}") && pwd)
